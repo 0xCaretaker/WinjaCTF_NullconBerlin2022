@@ -1,0 +1,16 @@
+version: "2.2"
+
+services:
+  jail-app:
+    image: ubuntu:latest
+    container_name: winja-bash-jail-temp
+    command: bash -c "apt update -y; apt install openssh-server vim -y; chmod +x /home/caretaker/jail.sh; service ssh start; tail -f /dev/null"
+    ports:
+      - "22222:22"
+    working_dir: /home/caretaker
+    volumes:
+      - ./res/passwd:/etc/passwd:ro
+      - ./res/shadow:/etc/shadow:ro
+      - ./res/group:/etc/group:ro
+      - ./flag.txt:/home/caretaker/flag.txt:ro
+      - ./jail.sh:/home/caretaker/jail.sh

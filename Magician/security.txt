@@ -1,0 +1,6 @@
+caretaker : @foxy, Change passwords for all high privileged users, they're too weak.
+foxy      : Sure, I'll do. Are you done with implementing the check on password strength?
+caretaker : Yeah. Also for the time being, I changed all password hashes to 0e123456789012345678901234567890. LMAO. Kudos to whoever cracks that out!
+foxy      : Haha LOL. Wait... Are you sure the backend code is secure?
+caretaker : I guess so. Why?
+caretaker : @foxy??

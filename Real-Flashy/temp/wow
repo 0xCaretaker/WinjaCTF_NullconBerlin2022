@@ -1,0 +1,9 @@
+docker run -v ~/Winja-Challenges/Real-Flashy/test:/shared -it rhub/debian-gcc11 bash
+apt install patchelf
+cd /shared
+patchelf --set-rpath '/shared' cxxmatrix
+apt update -y && apt install gcc -y
+gcc -shared -fPIC -nostartfiles -o libm.so.6 abc.c
+./cxxmatrix
+
+rm cxxmatrix.o cxxmatrix; make; patchelf --set-rpath '/shared' cxxmatrix ;gcc -shared -fPIC -nostartfiles -o libm.so.6 abc.c; ./cxxmatrix
