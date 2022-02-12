@@ -7,5 +7,5 @@
 - **Inmate** - Opens port 22222 on host
 - **Real-Flashy** - Opens port 2222 on host
 
-DM me on discord @TheCaretaker#5020 for any discrepancies. 
+> DM me on discord @TheCaretaker#5020 for any discrepancies. 
 ---
